@@ -874,11 +874,15 @@ export default function App() {
       fontFamily: 'Arial, sans-serif',
       fontSize: '14pt',
       fontWeight: 'bold',
-      background: isDarkMode 
-        ? 'linear-gradient(135deg, #ec4899 0%, #3b82f6 100%)' 
-        : 'linear-gradient(135deg, #0284c7 0%, #ea580c 100%)',
+      display: 'inline-block',
+      // Gradientes adaptados e vibrantes para cada tema (nunca ficam invisíveis)
+      backgroundImage: isDarkMode 
+        ? 'linear-gradient(135deg, #f472b6 0%, #38bdf8 100%)' // Rosa claro e Azul ciano (destaca-se no escuro)
+        : 'linear-gradient(135deg, #0284c7 0%, #7c3aed 100%)', // Azul forte e Roxo (destaca-se no claro)
       WebkitBackgroundClip: 'text',
+      backgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
+      color: isDarkMode ? '#f472b6' : '#0284c7', // Fallback seguro
     },
     themeButton: {
       padding: '6px 12px',
